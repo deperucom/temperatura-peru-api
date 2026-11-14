@@ -1,6 +1,6 @@
 # Temperatura actual de ciudades del Perú — API de DePeru.com
 
-Repositorio informativo sobre el servicio de temperatura actual de [DePeru.com](https://www.deperu.com) y su endpoint JSON. Reúne la URL, el formato de respuesta conocido, las restricciones de acceso y ejemplos sencillos para consultar los datos desde distintas plataformas.
+Repositorio informativo sobre el servicio de temperatura actual de [DePeru.com](https://www.deperu.com/clima/) y su endpoint JSON. Reúne la URL, el formato de respuesta conocido, las restricciones de acceso y ejemplos sencillos para consultar los datos desde distintas plataformas.
 
 > **Este repositorio no es la API ni está afiliado oficialmente a DePeru.com.** Los datos y el servicio son proporcionados por DePeru.com. Consulta el [sitio de clima](https://www.deperu.com/clima/) como fuente original.
 
@@ -43,12 +43,23 @@ Estas características se documentan a partir de la información disponible para
 
 El ejemplo es ilustrativo; los valores pueden variar. `ciudades` es una lista de objetos. El valor puede ser una temperatura numérica o una cadena como `"pronto"` cuando el dato no está disponible todavía. Por ello, no asumas que todos los valores son números.
 
+## Identifica tu aplicación con User-Agent
+
+Se recomienda enviar un encabezado `User-Agent` personalizado en las solicitudes. Incluye el dominio o nombre de la aplicación que consulta los datos para que el proveedor pueda identificar el origen de las peticiones. Por ejemplo:
+
+```http
+User-Agent: GuiaPlaza.com_EuroxDolar/1.0
+```
+
+Sustituye `GuiaPlaza.com_EuroxDolar/1.0` por el dominio o nombre y versión de tu propio sitio o aplicación. No uses un identificador que no te pertenezca. Los ejemplos de la [guía técnica](docs/guia-tecnica.md) muestran cómo configurarlo.
+
 ## Consulta rápida
 
-Desde una IP permitida, puedes probar con `curl`:
+Desde una IP permitida, puedes probar con `curl` y un User-Agent identificable:
 
 ```bash
 curl --fail --silent --show-error \
+  --user-agent 'GuiaPlaza.com_EuroxDolar/1.0' \
   https://deperu.com/api/rest/temperaturaAhora.json
 ```
 
@@ -56,6 +67,7 @@ Para ejemplos con manejo de errores en PHP, Python y Node.js, consulta la [guía
 
 ## Recomendaciones de consumo
 
+- Envía un `User-Agent` que identifique tu dominio o aplicación y su versión; reemplaza el ejemplo por tus propios datos.
 - Respeta el límite documentado de **1 solicitud por segundo**; no hagas polling rápido ni solicitudes en bucle.
 - Dado que los datos se actualizan cada 2 horas, normalmente es mejor consultar como máximo cada 2 horas y guardar la respuesta en caché.
 - El acceso está restringido a IPs del Perú. Una aplicación alojada fuera del país podría no poder consultar el endpoint directamente.

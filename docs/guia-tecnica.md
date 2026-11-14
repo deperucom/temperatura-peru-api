@@ -13,7 +13,7 @@ El acceso está limitado a IPs del Perú, el servicio se actualiza cada 2 horas 
 Se recomienda enviar un encabezado `User-Agent` que identifique el dominio o nombre de la aplicación cliente, y su versión, para que el proveedor pueda reconocer el origen de las solicitudes. Por ejemplo:
 
 ```http
-User-Agent: GuiaPlaza.com_EuroxDolar/1.0
+User-Agent: GuiaPlaza.com_ClimaLatam/1.0
 ```
 
 Los ejemplos usan ese valor como referencia. Reemplázalo por el dominio o nombre y versión de tu propio sitio o aplicación; no copies un identificador que no te pertenezca.
@@ -23,7 +23,7 @@ Los ejemplos usan ese valor como referencia. Reemplázalo por el dominio o nombr
 ```bash
 curl --fail --silent --show-error \
   --max-time 10 \
-  --user-agent 'GuiaPlaza.com_EuroxDolar/1.0' \
+  --user-agent 'GuiaPlaza.com_ClimaLatam/1.0' \
   https://deperu.com/api/rest/temperaturaAhora.json
 ```
 
@@ -39,7 +39,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 URL = "https://deperu.com/api/rest/temperaturaAhora.json"
-USER_AGENT = "GuiaPlaza.com_EuroxDolar/1.0"  # Cámbialo por el dominio/nombre de tu app
+USER_AGENT = "GuiaPlaza.com_ClimaLatam/1.0"  # Cámbialo por el dominio/nombre de tu app
 request = Request(
     URL,
     headers={
@@ -78,7 +78,7 @@ Requiere PHP con la extensión cURL habilitada:
 ```php
 <?php
 $url = 'https://deperu.com/api/rest/temperaturaAhora.json';
-$userAgent = 'GuiaPlaza.com_EuroxDolar/1.0'; // Cámbialo por el dominio/nombre de tu app
+$userAgent = 'GuiaPlaza.com_ClimaLatam/1.0'; // Cámbialo por el dominio/nombre de tu app
 $curl = curl_init($url);
 
 curl_setopt_array($curl, [
@@ -125,7 +125,7 @@ Requiere Node.js 18 o posterior, que incluye `fetch`:
 
 ```js
 const url = "https://deperu.com/api/rest/temperaturaAhora.json";
-const userAgent = "GuiaPlaza.com_EuroxDolar/1.0"; // Cámbialo por el dominio/nombre de tu app
+const userAgent = "GuiaPlaza.com_ClimaLatam/1.0"; // Cámbialo por el dominio/nombre de tu app
 
 async function main() {
   let response;
@@ -191,7 +191,7 @@ public class TemperaturaPeru {
                 .uri(URI.create("https://deperu.com/api/rest/temperaturaAhora.json"))
                 .timeout(Duration.ofSeconds(10))
                 .header("Accept", "application/json")
-                .header("User-Agent", "GuiaPlaza.com_EuroxDolar/1.0") // Sustituye por tu dominio/app
+                .header("User-Agent", "GuiaPlaza.com_ClimaLatam/1.0") // Sustituye por tu dominio/app
                 .GET()
                 .build();
 

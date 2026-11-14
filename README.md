@@ -1,6 +1,6 @@
 # Temperatura actual de ciudades del Perú — API de DePeru.com
 
-Repositorio informativo sobre el servicio de temperatura actual de [DePeru.com](https://www.deperu.com/clima/) y su endpoint JSON. Reúne la URL, el formato de respuesta conocido, las restricciones de acceso y ejemplos sencillos para consultar los datos desde distintas plataformas.
+Repositorio informativo sobre el servicio de temperatura actual de [DePeru.com](https://www.deperu.com) y su endpoint JSON. Reúne la URL, el formato de respuesta conocido, las restricciones de acceso y ejemplos sencillos para consultar los datos desde distintas plataformas.
 
 > **Este repositorio no es la API ni está afiliado oficialmente a DePeru.com.** Los datos y el servicio son proporcionados por DePeru.com. Consulta el [sitio de clima](https://www.deperu.com/clima/) como fuente original.
 

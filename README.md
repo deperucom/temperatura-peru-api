@@ -48,10 +48,10 @@ El ejemplo es ilustrativo; los valores pueden variar. `ciudades` es una lista de
 Se recomienda enviar un encabezado `User-Agent` personalizado en las solicitudes. Incluye el dominio o nombre de la aplicación que consulta los datos para que el proveedor pueda identificar el origen de las peticiones. Por ejemplo:
 
 ```http
-User-Agent: GuiaPlaza.com_EuroxDolar/1.0
+User-Agent: GuiaPlaza.com_ClimaLatam/1.0
 ```
 
-Sustituye `GuiaPlaza.com_EuroxDolar/1.0` por el dominio o nombre y versión de tu propio sitio o aplicación. No uses un identificador que no te pertenezca. Los ejemplos de la [guía técnica](docs/guia-tecnica.md) muestran cómo configurarlo.
+Sustituye `GuiaPlaza.com_ClimaLatam/1.0` por el dominio o nombre y versión de tu propio sitio o aplicación. No uses un identificador que no te pertenezca. Los ejemplos de la [guía técnica](docs/guia-tecnica.md) muestran cómo configurarlo.
 
 ## Consulta rápida
 
@@ -59,7 +59,7 @@ Desde una IP permitida, puedes probar con `curl` y un User-Agent identificable:
 
 ```bash
 curl --fail --silent --show-error \
-  --user-agent 'GuiaPlaza.com_EuroxDolar/1.0' \
+  --user-agent 'GuiaPlaza.com_ClimaLatam/1.0' \
   https://deperu.com/api/rest/temperaturaAhora.json
 ```
 

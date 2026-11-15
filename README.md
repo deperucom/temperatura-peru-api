@@ -2,7 +2,7 @@
 
 Repositorio informativo sobre el servicio de temperatura actual de [DePeru.com](https://www.deperu.com/clima/) y su endpoint JSON. Reúne la URL, el formato de respuesta conocido, las restricciones de acceso y ejemplos sencillos para consultar los datos desde distintas plataformas.
 
-> **Este repositorio no es la API ni está afiliado oficialmente a DePeru.com.** Los datos y el servicio son proporcionados por DePeru.com. Consulta el [sitio de clima](https://www.deperu.com/clima/) como fuente original.
+> **Este repositorio no es del sistema de climatología oficial del Perú** Los datos y el servicio son proporcionados por DePeru.com. Consulta el [sitio de clima](https://www.deperu.com/clima/) como fuente original.
 
 ## Enlaces
 
@@ -87,4 +87,4 @@ Al mostrar los datos, conserva una atribución visible a **DePeru.com** y, cuand
 
 ## Aviso
 
-Este proyecto es independiente y tiene fines informativos. No es un proxy, cliente oficial ni servicio de DePeru.com. La URL y las características aquí descritas pueden cambiar sin previo aviso; confirma la información con el proveedor antes de depender de ella.
+Este proyecto es independiente y tiene fines informativos. No es un proxy, cliente oficial ni servicio del Peru. La URL y las características aquí descritas pueden cambiar sin previo aviso; confirma la información con el proveedor antes de depender de ella.

@@ -9,6 +9,7 @@ Repositorio informativo sobre el servicio de temperatura actual de [DePeru.com](
 - **Página de clima:** https://www.deperu.com/clima/
 - **Página de la API:** https://www.deperu.com/api/
 - **Endpoint JSON:** https://deperu.com/api/rest/temperaturaAhora.json
+- **Contacto DePeru.com:** https://deperu.com/contacto
 
 ## ¿Qué ofrece el servicio?
 
